@@ -1,0 +1,141 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.reviews {
+  $root: &;
+
+  &__content {
+    p {
+      max-width: 453px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    padding: 16px;
+    background-color: var(--color-white);
+
+    p {
+      font-weight: var(--fw-400);
+      font-size: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem);
+    }
+  }
+
+  &__promote {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: var(--radius-main);
+    padding: 12px 16px;
+    font-style: italic;
+    font-size: clamp(18px, 1.0833rem + 0.7407vi, 28px);
+    text-align: center;
+    background-color: #e1e2e4;
+
+    &--pink {
+      color: var(--color-white);
+      background-color: #fd4f7e;
+    }
+
+    &--gray {
+      background: linear-gradient(270deg, #f2f2f2 0%, #fff 100%);
+    }
+  }
+
+  &--about {
+    #{$root}__content {
+      margin-bottom: 60px;
+
+      p {
+        max-width: 736px;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  span:not([class]) {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    font-size: clamp(18px, 0.8333rem + 1.2963vi, 32px);
+    text-transform: none;
+  }
+
+  @include media(tablet) {
+    padding: 30px 0;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      padding: 16px;
+
+      img {
+        margin-bottom: 16px;
+      }
+
+      span:not([class]) {
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        grid-column: 2 span;
+        max-width: 100%;
+        text-align: center;
+
+        img {
+          object-position: top;
+          aspect-ratio: 2/1;
+        }
+
+        h3 {
+          width: auto;
+        }
+      }
+    }
+
+    &--about {
+    #{$root}__content {
+      margin-bottom: 30px;
+      text-align: center;
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      padding: 0;
+      &:last-child {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    img {
+      aspect-ratio: 2/1;
+      object-position: top;
+    }
+  }
+}

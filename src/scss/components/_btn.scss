@@ -1,0 +1,90 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+*[class].btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 2px solid var(--color-red-400);
+  border-radius: var(--radius-main);
+  padding: 4px 14px;
+  width: 100%;
+  max-width: fit-content;
+  font-family: inherit;
+  font-weight: var(--fw-500);
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--red-400);
+  background-color: var(--color-white);
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+  gap: 4px;
+
+  &::after {
+    @include mask;
+
+    position: relative;
+    mask-image: url("../images/icons/arrow.svg");
+    width: 10px;
+    height: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-white);
+    background-color: var(--color-red-400);
+  }
+
+  &--sign {
+    color: var(--color-red-400);
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &--small {
+    border-color: transparent;
+    padding: 0;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: var(--color-red-400);
+      background-color: transparent;
+    }
+  }
+
+  &--request {
+    color: var(--color-white);
+    background-color: var(--color-red-400);
+
+    &:hover,
+    &:focus {
+      color: var(--color-red-400) !important;
+      background-color: var(--color-white);
+    }
+  }
+
+  &--slider {
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    min-width: 50px;
+    min-height: 50px;
+    padding: 0;
+    background-color: var(--color-gray-300);
+
+    &::after {
+      content: "";
+      position: absolute;
+      mask-image: url("../images/icons/arrow-right.svg");
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

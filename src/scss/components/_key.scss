@@ -1,0 +1,97 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.key {
+  $root: &;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 24px;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 762px;
+
+    &:first-child {
+      grid-row: 2 span;
+      max-width: 526px;
+    }
+
+    &--flex {
+      .key__desc {
+        top: 0;
+        border-radius: 0 0 24px;
+        max-width: 534px;
+      }
+    }
+
+    &--peace {
+      .key__desc {
+        left: auto;
+        right: 0;
+        bottom: 0;
+        border-radius: 24px 0 0;
+        max-width: 608px;
+      }
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    overflow: hidden;
+    border-radius: 0 24px 24px 0;
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 441px;
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.5) 100%);
+
+    p {
+      font-weight: var(--fw-400);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  h3 {
+    margin-bottom: 6px;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    text-transform: none;
+  }
+
+  @include media(tablet) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      grid-row: auto;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        min-height: 210px;
+      }
+
+      &:first-of-type {
+        grid-row: auto;
+        max-width: 100%;
+
+        img {
+          aspect-ratio: 4/1;
+        }
+      }
+    }
+  }
+}
