@@ -5,23 +5,21 @@ h1,
 h2,
 h3 {
   overflow: hidden;
+  margin-bottom: 24px;
   width: fit-content;
   font-family: var(--font-family-secondary);
-  font-weight: var(--fw-500);
-  font-size: clamp(1.875rem, 1.625rem + 1.1111vi, 2.625rem);
-  line-height: 1.1;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  font-size: clamp(35px, 1.1667rem + 3.1481vi, 64px);
+  line-height: 1.25;
+  letter-spacing: 0.01rem;
 }
 
 h2,
 h3 {
-  font-size: clamp(1.5625rem, 1.4167rem + 0.6481vi, 2rem);
-  line-height: 1.2;
-  letter-spacing: 0;
+  font-size: clamp(35px, 1.25rem + 1.3889vi, 40px);
+  letter-spacing: 0.01rem;
 }
 
-
-p {
-  font-size: clamp(16px, 0.9583rem + 0.1852vi, 18px);
+p:not([class]) {
+  opacity: 0.6;
 }

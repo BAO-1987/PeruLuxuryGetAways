@@ -3,7 +3,7 @@ import Swiper, {
 } from 'swiper';
 
 const slider = new Swiper('.slider__swiper', {
-  slidesPerView: 1,
+  slidesPerView: 3,
   spaceBetween: 20,
   modules: [Navigation, Autoplay],
   draggable: true,

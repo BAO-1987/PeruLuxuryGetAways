@@ -4,12 +4,21 @@
 .slider {
   position: relative;
   overflow: hidden;
-  padding-bottom: 64px;
+
+  &__inner {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__swiper {
+    overflow: hidden;
+  }
 
   &__content {
-    p {
-      max-width: 100%;
-    }
+    align-self: flex-start;
+    width: 100%;
+    max-width: 421px;
+    color: var(--color-white);
   }
 
   &__item {
@@ -34,7 +43,7 @@
     font-size: clamp(18px, 1rem + 0.5556vi, 24px);
   }
 
-  .btn {
+  .btn--slider {
     position: absolute;
     top: 50%;
     transform: translateY(50%);
@@ -65,11 +74,7 @@
     }
 
     @include media(mobile-m) {
-       transform: translateY(80%);
+      transform: translateY(80%);
     }
-  }
-
-  @include media(tablet) {
-    padding-bottom: 30px;
   }
 }

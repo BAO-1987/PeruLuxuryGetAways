@@ -13,10 +13,10 @@ body {
   font-weight: var(--fw-300);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
-  line-height: 1;
+  line-height: 1.25;
   letter-spacing: 0;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-dark-900);
+  background-color: var(--color-gray-100);
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -46,8 +46,9 @@ body {
   }
 }
 
-.section {
-  padding: rem(64) 0;
+.section,
+.background {
+  padding: rem(60) 0;
 
   @include media(tablet-wide) {
     padding: 45px 0;
@@ -56,6 +57,10 @@ body {
   @include media(tablet) {
     padding: 30px 0;
   }
+}
+
+.background {
+  background-color: var(--color-green-600);
 }
 
 .container,
@@ -67,12 +72,21 @@ body {
 }
 
 .wrapper {
-  max-width: 1248px;
+  max-width: 1090px;
 }
 
-.image {
+.overlay {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
-  border-radius: var(--radius-main);
+  border-radius: var(--radius-big);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(79, 144, 182, 0) 76.405%, rgba(238, 238, 238, 0.8) 100%);
+    inset: 0;
+  }
 }
 
 .site-container {
@@ -83,7 +97,7 @@ body {
 }
 
 .main {
-  padding-top: calc(var(--header-height) + 24px);
+  padding-top: var(--header-height);
 }
 
 .logo {
@@ -91,9 +105,8 @@ body {
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  margin-right: rem(64);
   width: 100%;
-  max-width: 236px;
+  max-width: 300px;
 
   @include media(tablet) {
     margin-right: 25px;
@@ -101,53 +114,4 @@ body {
   }
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  margin: 0 auto rem(64);
-  padding-left: 48px;
-  gap: 60px;
 
-  p {
-    width: 100%;
-    max-width: 582px;
-  }
-
-  @include media(tablet-wide) {
-    margin-bottom: 30px;
-    padding-left: 0;
-    gap: 25px;
-  }
-
-  @include media(tablet) {
-    flex-direction: column;
-  }
-}
-
-.is-scrolling {
-  overflow: hidden;
-  scrollbar-color: var(--color-blue-300) var(--color-white);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-white);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-blue-300);
-  }
-
-  @include media(desktop) {
-    overflow-x: scroll;
-    padding: 15px 0;
-  }
-}
