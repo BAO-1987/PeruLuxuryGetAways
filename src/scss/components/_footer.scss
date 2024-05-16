@@ -2,119 +2,30 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  background-color: var(--color-blue-600);
-
-  .logo {
-    margin-right: 20px;
-    max-width: 284px;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    padding-right: 64px;
-    gap: 61px;
-  }
-
-  &__block {
-    p {
-      margin-bottom: 16px;
-      font-weight: var(--fw-500);
-      font-size: 24px;
-      text-transform: uppercase;
-      color: var(--color-white);
-    }
-  }
+  padding: 40px 0;
+  color: var(--color-white);
+  background-color: var(--color-green-600);
 
   &__list {
-    display: grid;
-    gap: 12px;
-
-    a {
-      font-size: 16px;
-      color: var(--color-white);
-      transition: color 0.3s linear;
-
-      &:hover {
-        color: var(--color-blue-300);
-      }
-    }
-  }
-
-  &__bottom {
-    padding: 16px 0;
-    background-color: var(--color-white);
+    display: flex;
+    gap: 24px;
   }
 
   &__copy {
     display: flex;
     justify-content: space-between;
-    font-family: var(--font-family-secondary);
-    text-transform: uppercase;
-    gap: 24px;
 
-    p,
-    a {
-      font-weight: var(--fw-400);
-      font-variant: small-caps;
-      font-size: 16px;
-      letter-spacing: 0.09em;
-      text-transform: lowercase;
+    p {
+      opacity: 1;
     }
   }
 
   &__policy {
     display: flex;
-    gap: 64px;
-
-    a {
-      text-decoration: underline;
-      transition: color 0.3s linear;
-
-      &:hover {
-        color: var(--color-blue-600);
-      }
-    }
+    gap: 24px;
   }
 
-  @include media(tablet-wide) {
-    &__grid {
-      padding-right: 0;
-      gap: 30px;
-    }
-  }
-
-  @include media(tablet) {
-    &__grid {
-      width: 100%;
-    }
-
-    &__policy {
-      gap: 24px;
-    }
-
-    .logo {
-      margin-right: 0;
-    }
-  }
-
-  @include media(mobile-l) {
-    &__grid {
-      justify-content: center;
-      grid-template-columns: repeat(2, 1fr);
-      width: fit-content;
-    }
-
-    &__copy {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  }
-
-  @include media(mobile-sm) {
-    &__grid {
-      grid-template-columns: 1fr;
-    }
+  .logo {
+    margin-bottom: 24px;
   }
 }

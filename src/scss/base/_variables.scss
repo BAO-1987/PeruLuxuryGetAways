@@ -26,10 +26,13 @@
   --color-black: #000;
   --color-dark-900: #252b42;
   --color-gray-100: #eeeeee;
-  --color-green-600: #074760;
+  --color-gray-300: #ababab; --color-green-600: #074760;
   --color-red-400: #d91023;
 
   //  radius
   --radius-main: 10px;
   --radius-big: 24px;
+
+  --gradient-white: linear-gradient(180deg, rgba(206, 207, 208, 0) 77.059%, rgba(255, 255, 255, 0.8) 100%),
+    rgba(238, 238, 238, 0.08);
 }

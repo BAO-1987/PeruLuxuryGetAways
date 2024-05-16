@@ -1,0 +1,29 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.discover {
+  &__content {
+    margin: 0 auto 48px;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 867px;
+    gap: 24px;
+    margin-inline: auto;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--color-white);
+  }
+
+  &__desc {
+    padding: 24px;
+  }
+}

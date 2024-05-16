@@ -9,9 +9,10 @@ const slider = new Swiper('.slider__swiper', {
   draggable: true,
   grabCursor: true,
   speed: 700,
-  autoplay: {
-    delay: 3000,
-  },
+  // loop: true,
+  // autoplay: {
+  //   delay: 3000,
+  // },
 
   navigation: {
     nextEl: '.slider__swiper .btn--next',
@@ -39,7 +40,7 @@ const slider = new Swiper('.slider__swiper', {
     },
 
     992: {
-      slidesPerView: 3.5,
+      slidesPerView: 3,
     },
   },
 

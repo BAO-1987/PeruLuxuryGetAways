@@ -49,12 +49,7 @@
   }
 
   &--footer {
-    align-items: flex-start;
-    padding: 35px 0 65px;
-
-    &::before {
-      content: none;
-    }
+    margin-bottom: 48px;
   }
 
   @include media(tablet-wide) {

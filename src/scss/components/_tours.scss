@@ -1,0 +1,57 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.tours {
+  &__grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 25px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 421px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    p {
+      margin-bottom: 24px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 35px;
+      letter-spacing: 0.01em;
+      opacity: 0.6;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 5px;
+        left: 17px;
+        border-radius: 50%;
+        background-color: var(--color-dark-900);
+        opacity: 0.6;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 24px;
+  }
+}
