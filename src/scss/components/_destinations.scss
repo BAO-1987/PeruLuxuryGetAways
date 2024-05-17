@@ -51,4 +51,37 @@
       }
     }
   }
+
+  @include media(tablet) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      order: -1;
+    }
+
+    &__title {
+      margin-bottom: 36px;
+
+      &::before {
+        bottom: -14px;
+      }
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
 }

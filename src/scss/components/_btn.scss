@@ -23,7 +23,8 @@
 
   &:hover,
   &:focus {
-    color: var(--color-red-400);
+    border-color: var(--color-red-400);
+    color: var(--color-red-400) !important;
     background-color: var(--color-white);
   }
 
@@ -36,46 +37,30 @@
     padding: 12px 47px;
   }
 
-  // &--small {
-  //   border-color: transparent;
-  //   padding: 0;
-  //   background-color: transparent;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--color-red-400);
-  //     background-color: transparent;
-  //   }
-  // }
-
-  // &--request {
-  //   color: var(--color-white);
-  //   background-color: var(--color-red-400);
-
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--color-red-400) !important;
-  //     background-color: var(--color-white);
-  //   }
-  // }
-
   &--slider {
     position: relative;
     z-index: 2;
     border-radius: 50%;
+    padding: 0;
     min-width: 36px;
     min-height: 36px;
-    padding: 0;
     background-color: var(--color-white);
     opacity: 0.6;
+    transition: opacity 0.3s linear;
 
     &::before {
       content: "";
       position: absolute;
       mask-image: url("../images/icons/arrow.svg");
-      background-color: var(--color-black);
       width: 8px;
       height: 12px;
+      background-color: var(--color-black);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      opacity: 1;
     }
   }
 }

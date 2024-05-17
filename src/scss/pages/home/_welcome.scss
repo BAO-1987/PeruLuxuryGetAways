@@ -2,7 +2,7 @@
 @use "../../utils/mixins/" as *;
 
 .welcome {
-  padding-bottom: 81px;
+  padding-bottom: rem(81);
 
   &__content {
     display: grid;
@@ -46,5 +46,42 @@
 
   h2 {
     margin-bottom: 24px;
+  }
+
+  @include media(tablet) {
+    padding: 40px;
+
+    &__content {
+      grid-template-columns: 1fr;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        object-position: center;
+        aspect-ratio: 2/1;
+      }
+    }
+
+    &__desc {
+      order: -1;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__grid {
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
   }
 }

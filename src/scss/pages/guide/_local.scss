@@ -16,6 +16,23 @@
 
   h2 {
     margin-bottom: 36px;
-    font-size: clamp(1.25rem, 1.0417rem + 0.9259vi, 1.875rem);
+  }
+
+  @include media(tablet) {
+    &__item {
+      grid-template-columns: 1fr;
+
+      &:last-of-type {
+        .local__content {
+          order: -1;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      text-align: center;
+
+    }
   }
 }

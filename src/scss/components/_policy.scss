@@ -27,7 +27,6 @@
 
   li {
     padding-left: 10px;
-    color: var(--color-green-600);
 
     &:not(:last-child) {
       margin-bottom: 3px;
@@ -44,8 +43,14 @@
     }
   }
 
+  p,
+  li {
+    color: var(--color-green-600);
+    opacity: 1;
+  }
+
   a {
     text-decoration: underline;
-    color: var(--color-blue-300);
+    color: currentcolor;
   }
 }

@@ -31,8 +31,6 @@
       margin-bottom: 16px;
     }
 
-
-
     li {
       position: relative;
       padding-left: 25px;
@@ -42,11 +40,11 @@
       &::before {
         content: "";
         position: absolute;
+        left: 10px;
+        top: 7px;
+        border-radius: 50%;
         width: 5px;
         height: 5px;
-        top: 7px;
-        left: 10px;
-        border-radius: 50%;
         background-color: currentcolor;
         opacity: 0.6;
       }
@@ -63,5 +61,43 @@
 
   h3 {
     margin-bottom: 21px;
+  }
+
+  img {
+    height: 100%;
+  }
+
+  @include media(tablet) {
+    &__item {
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+
+      &:last-of-type {
+        .tours__content {
+          order: -1;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      object-position: center;
+      aspect-ratio: 2/1;
+    }
+
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    li {
+      padding-left: 20px;
+    }
+
+    &__desc,
+    &__content {
+      max-width: 100%;
+    }
   }
 }

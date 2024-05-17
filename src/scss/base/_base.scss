@@ -72,7 +72,7 @@ body {
     h3 {
       color: var(--color-green-600);
     }
-    
+
     p {
       color: var(--color-dark-900);
     }
@@ -117,6 +117,14 @@ body {
       background: var(--gradient-white);
     }
   }
+
+  @include media(tablet) {
+    img {
+      width: 100%;
+      object-position: center;
+      aspect-ratio: 2/1;
+    }
+  }
 }
 
 .site-container {
@@ -137,9 +145,4 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 300px;
-
-  @include media(tablet) {
-    margin-right: 25px;
-    max-width: 200px;
-  }
 }

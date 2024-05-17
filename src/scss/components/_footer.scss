@@ -8,6 +8,11 @@
 
   a {
     line-height: 1.5;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: var(--color-red-400);
+    }
   }
 
   &__list {
@@ -35,5 +40,18 @@
 
   .logo {
     margin-bottom: 14px;
+  }
+
+  @include media(mobile-l) {
+    &__copy {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 25px;
+    }
+
+    &__policy {
+      justify-content: center;
+    }
   }
 }

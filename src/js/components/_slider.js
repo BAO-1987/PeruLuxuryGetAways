@@ -1,18 +1,19 @@
 import Swiper, {
-  Navigation, Autoplay
+  Navigation,
+  Autoplay
 } from 'swiper';
 
 const slider = new Swiper('.slider__swiper', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 24,
   modules: [Navigation, Autoplay],
   draggable: true,
   grabCursor: true,
   speed: 700,
-  // loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
 
   navigation: {
     nextEl: '.slider__swiper .btn--next',
@@ -21,23 +22,19 @@ const slider = new Swiper('.slider__swiper', {
 
   breakpoints: {
 
-    375: {
-      slidesPerView: 1,
-    },
-
     475: {
       slidesPerView: 1,
-      spaceBetween: 10,
     },
 
     575: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 2,
     },
 
     768: {
       slidesPerView: 3,
+      spaceBetween: 15,
     },
+
 
     992: {
       slidesPerView: 3,

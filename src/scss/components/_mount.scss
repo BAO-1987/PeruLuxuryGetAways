@@ -11,4 +11,12 @@
   &::before {
     background: var(--gradient-blue);
   }
+
+  @include media(tablet) {
+    min-height: 400px;
+  }
+
+  @include media(mobile-l) {
+    min-height: 350px;
+  }
 }

@@ -2,61 +2,49 @@
 @use "../utils/mixins/" as *;
 
 .hero {
-  $root: &;
-  padding: 88px 0;
+  padding: rem(88) 0;
 
   &__inner {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
     gap: 24px;
   }
 
-p {
-  margin-bottom: 24px;
-  width: 100%;
-  max-width: 533px;
-  font-weight: var(--fw-500);
-  font-size: clamp(1.125rem, 1rem + 0.5556vi, 1.5rem);
-  line-height: 1.38;
-  letter-spacing: 0;
-  color: var(--color-green-600)
-
-}
+  p {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 533px;
+    font-weight: var(--fw-500);
+    font-size: clamp(1.125rem, 1rem + 0.5556vi, 1.5rem);
+    line-height: 1.38;
+    letter-spacing: 0;
+    color: var(--color-green-600);
+  }
 
   .btn {
     padding: 10px 26px;
   }
 
-  &--home {
-    #{$root}__inner {
-      align-items: center;
-    }
-
-    #{$root}__content {
-      translate: none;
-      p {
-        margin-bottom: 32px;
-      }
-    }
+  @include media(tablet-wide) {
+    padding: 45px;
   }
 
   @include media(tablet) {
+    padding: 30px 0;
+
     &__inner {
-      flex-direction: column-reverse;
+      grid-template-columns: 1fr;
     }
 
-    &__content {
+    p {
       max-width: 100%;
-      translate: none;
-      text-align: center;
     }
 
-    &__image {
-      img {
-        width: 100%;
-      }
+    img {
+      width: 100%;
+      object-position: center;
+      aspect-ratio: 2/1;
     }
   }
 

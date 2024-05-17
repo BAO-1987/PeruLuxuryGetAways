@@ -34,4 +34,19 @@
   h3 {
     margin-bottom: 11px;
   }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__desc {
+      padding: 16px;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 2/1;
+    }
+  }
 }

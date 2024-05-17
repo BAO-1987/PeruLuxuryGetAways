@@ -5,6 +5,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    gap: 25px;
   }
 
   &__content {
@@ -24,5 +25,25 @@
 
   h3 {
     margin-bottom: 14px;
+  }
+
+  @include media(tablet) {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
   }
 }

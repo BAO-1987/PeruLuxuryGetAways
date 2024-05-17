@@ -7,15 +7,20 @@ h2 {
   margin-bottom: 24px;
   font-family: var(--font-family-secondary);
   font-weight: var(--fw-700);
-  font-size: clamp(35px, 1.1667rem + 3.1481vi, 64px);
+  font-size: clamp(30px, 1.1667rem + 3.1481vi, 64px);
   line-height: 1.26;
   letter-spacing: 0.01rem;
 }
 
-h2 {
+h2,
+.title {
   margin-bottom: 16px;
-  font-size: clamp(35px, 1.25rem + 1.3889vi, 40px);
+  font-size: clamp(30px, 1.25rem + 1.3889vi, 40px);
   line-height: 1.4;
+}
+
+.title {
+  font-size: clamp(1.25rem, 1.0417rem + 0.9259vi, 1.875rem);
 }
 
 h3 {
