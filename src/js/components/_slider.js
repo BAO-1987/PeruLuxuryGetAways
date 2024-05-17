@@ -4,7 +4,7 @@ import Swiper, {
 
 const slider = new Swiper('.slider__swiper', {
   slidesPerView: 3,
-  spaceBetween: 20,
+  spaceBetween: 24,
   modules: [Navigation, Autoplay],
   draggable: true,
   grabCursor: true,

@@ -8,13 +8,14 @@ h2 {
   font-family: var(--font-family-secondary);
   font-weight: var(--fw-700);
   font-size: clamp(35px, 1.1667rem + 3.1481vi, 64px);
-  line-height: 1.25;
+  line-height: 1.26;
   letter-spacing: 0.01rem;
 }
 
 h2 {
   margin-bottom: 16px;
   font-size: clamp(35px, 1.25rem + 1.3889vi, 40px);
+  line-height: 1.4;
 }
 
 h3 {
@@ -23,6 +24,7 @@ h3 {
   font-size: 18px;
   line-height: 1.1;
   color: var(--color-green-600);
+  letter-spacing: 0.01rem;
 }
 
 p:not([class]) {
@@ -33,5 +35,7 @@ p:not([class]) {
 .subtext {
   font-weight: var(--fw-500);
   font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
   opacity: 0.8;
 }

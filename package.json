@@ -56,7 +56,6 @@
   "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "parcel-namer-rewrite": {},
   "dependencies": {
-    "caniuse-lite": "^1.0.30001558",
     "lottie-to-svg": "^1.1.0",
     "swiper": "^9.2.4"
   },

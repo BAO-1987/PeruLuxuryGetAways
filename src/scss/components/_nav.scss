@@ -45,10 +45,18 @@
   &__btns {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
+  }
+
+  &__block {
+    span {
+      padding-left: 4px;
+      font-weight: var(--fw-700);
+    }
   }
 
   &--footer {
+    align-items: flex-start;
     margin-bottom: 48px;
   }
 

@@ -1,0 +1,91 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.guide {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    p {
+      margin-bottom: 14px;
+      opacity: 0.8;
+    }
+
+    li {
+      position: relative;
+      color: var(--color-white);
+      letter-spacing: 0.01em;
+      opacity: 0.6;
+      margin-bottom: 14px;
+      padding-left: 35px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: 5px;
+        left: 17px;
+        border-radius: 50%;
+        background-color: currentColor;
+        opacity: 0.6;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 11px;
+    font-size: clamp(1.25rem, 1.0417rem + 0.9259vi, 1.875rem);
+  }
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    color: var(--color-white);
+    letter-spacing: 0.01em;
+    opacity: 0.6;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 7px;
+      left: 10px;
+      border-radius: 50%;
+      background-color: currentcolor;
+      opacity: 0.6;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &--background {
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__desc {
+    h2 {
+      margin-bottom: 10px;
+    }
+
+   + p {
+      margin-bottom: 24px;
+    }
+  }
+}

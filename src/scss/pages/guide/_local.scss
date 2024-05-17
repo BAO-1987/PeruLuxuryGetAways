@@ -1,0 +1,21 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.local {
+  &__grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  h2 {
+    margin-bottom: 36px;
+    font-size: clamp(1.25rem, 1.0417rem + 0.9259vi, 1.875rem);
+  }
+}

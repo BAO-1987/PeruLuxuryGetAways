@@ -7,6 +7,7 @@
 
   &__inner {
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     gap: 24px;
@@ -14,9 +15,12 @@
 
 p {
   margin-bottom: 24px;
+  width: 100%;
+  max-width: 533px;
   font-weight: var(--fw-500);
   font-size: clamp(1.125rem, 1rem + 0.5556vi, 1.5rem);
   line-height: 1.38;
+  letter-spacing: 0;
   color: var(--color-green-600)
 
 }

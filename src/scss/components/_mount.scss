@@ -1,0 +1,14 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.mount {
+  border-radius: 0;
+  min-height: 540px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    background: var(--gradient-blue);
+  }
+}

@@ -6,9 +6,17 @@
   color: var(--color-white);
   background-color: var(--color-green-600);
 
+  a {
+    line-height: 1.5;
+  }
+
   &__list {
     display: flex;
-    gap: 24px;
+    gap: 27px;
+
+    a {
+      font-size: 18px;
+    }
   }
 
   &__copy {
@@ -26,6 +34,6 @@
   }
 
   .logo {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 }

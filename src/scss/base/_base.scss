@@ -60,7 +60,29 @@ body {
 }
 
 .background {
+  color: var(--color-white);
   background-color: var(--color-green-600);
+
+  h2,
+  h3 {
+    color: var(--color-white);
+  }
+
+  .discover__desc {
+    h3 {
+      color: var(--color-green-600);
+    }
+    
+    p {
+      color: var(--color-dark-900);
+    }
+  }
+
+  .overlay {
+    &::before {
+      background: var(--gradient-blue);
+    }
+  }
 }
 
 .container,
@@ -121,5 +143,3 @@ body {
     max-width: 200px;
   }
 }
-
-
