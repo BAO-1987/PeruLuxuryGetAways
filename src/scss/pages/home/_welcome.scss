@@ -55,14 +55,6 @@
       grid-template-columns: 1fr;
     }
 
-    &__image {
-      img {
-        width: 100%;
-        object-position: center;
-        aspect-ratio: 2/1;
-      }
-    }
-
     &__desc {
       order: -1;
       max-width: 100%;

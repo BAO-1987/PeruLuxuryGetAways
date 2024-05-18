@@ -35,10 +35,6 @@
     &__content {
       max-width: 100%;
     }
-
-    img {
-      width: 100%;
-    }
   }
 
   @include media(mobile-l) {
